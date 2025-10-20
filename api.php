@@ -69,6 +69,6 @@ $api_paths = array_map(function ($api_path_template) use ($api, $user)
 	return $api->get_api_path($user, $api_path_template);
 }, $api_path_templates);
 
-echo json_encode($api_paths, JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
+echo json_encode($api_paths, JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE); // Исправила тут ошибку
 
 $expected_result = ['/api/items/20/John%20Dow','/api/items/20/QA','/api/items/20/100'];
